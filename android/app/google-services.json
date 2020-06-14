@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "759189648661",
+    "firebase_url": "https://firmfello---test.firebaseio.com",
+    "project_id": "firmfello---test",
+    "storage_bucket": "firmfello---test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759189648661:android:34b0ee3d769de95681251c",
+        "android_client_info": {
+          "package_name": "com.firmfellow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759189648661-dh2sv7g87oqmp3q0assqfsbd3r9uil8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firmfellow",
+            "certificate_hash": "a8201d0be8778fcdd2a5c64688c6c080734a8aa4"
+          }
+        },
+        {
+          "client_id": "759189648661-cc29476do8qvcj43c46j1d3a4ulb1ijr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiiTMnW76QAoSIUEVsRdTPjkXb-2XjlBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759189648661-cc29476do8qvcj43c46j1d3a4ulb1ijr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
