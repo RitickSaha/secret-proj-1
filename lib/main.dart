@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:lemmehandle/Businessdetails.dart';
+// import 'package:lemmehandle/home_dash.dart';
 
 import 'login.dart';
 
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-//      home: LoginAuth(),
-      home: LoginAuth(),
+     home: LoginAuth(),
+      // home: Businessdetails(),
     );
   }
 }

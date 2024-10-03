@@ -5,6 +5,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import 'home_dash.dart';
+
 class LoginAuth extends StatefulWidget {
   @override
   _LoginAuthState createState() => _LoginAuthState();
@@ -54,7 +56,7 @@ class _LoginAuthState extends State<LoginAuth> {
             googleProfileUrl = user.photoUrl;
             googleorsignout = 'Sign Out ' + user.email;
           });
-        } else {}
+        }
       });
     }
 
@@ -71,96 +73,7 @@ class _LoginAuthState extends State<LoginAuth> {
     }
 
     if (user != null) {
-//      return Home_dash(user);
-      return Scaffold(
-        backgroundColor: const Color(0xff04032b),
-        body: SafeArea(
-          child: Center(
-            child: Container(
-              width: double.infinity,
-              margin: const EdgeInsets.only(left: 20.0, top: 20, right: 20.0),
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    'Welcome ${user.displayName}',
-                    style: TextStyle(
-                      fontFamily: 'Nudista',
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  Text(
-                    'Some Details of you:',
-                    style: TextStyle(
-                      fontFamily: 'Nudista',
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  ClipOval(
-                    child: CachedNetworkImage(
-                      imageUrl: '${user.photoUrl}',
-                      width: 100.0,
-                      height: 100.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black87,
-                        borderRadius: BorderRadius.circular(50)),
-                    margin: EdgeInsets.all(10),
-                    height: 60,
-                    width: 300,
-                    padding: const EdgeInsets.all(20.0),
-                    child: FlatButton(
-                      onPressed: () async {
-                        final FirebaseUser user = await _auth.currentUser();
-                        if (user == null) {
-                          Scaffold.of(context).showSnackBar(const SnackBar(
-                            content: Text('No one has signed in.'),
-                          ));
-                          return;
-                        }
-                        _signout();
-                        final String uid = user.uid;
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                          content: Text(uid + ' has successfully signed out.'),
-                        ));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.email,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            "Sign Out",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: "Tajawal",
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      );
+return Home_dash();
     }
     return Scaffold(
       body: Builder(
